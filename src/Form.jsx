@@ -22,7 +22,7 @@ export default function Form({ descriptor }) {
     // (like an add product page for admins etc)
     // clear the form - reset to initial values
     // example: reset the form with a message at top
-    resetForm('Tack för registreringen, registrera en till?');
+    resetForm(<p>Tack för registreringen, registrera en till?</p>);
   }
 
   return <>

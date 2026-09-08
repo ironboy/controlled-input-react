@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 
 export default function useFormDescriptor(descriptor) {
 
@@ -31,7 +31,7 @@ export default function useFormDescriptor(descriptor) {
 
 
   // Transform the descriptor into jsx by looping through it's entrie
-  const fields = [<p key="resetMessage">{resetMessage}</p>];
+  const fields = [<Fragment key="resetMessage">{resetMessage}</Fragment>];
   const initialFormState = {};
   for (let [formFieldName, fieldDescription] of Object.entries(descriptor)) {
     const { label, type, initialValue, required } = fieldDescription;
