@@ -1,4 +1,5 @@
-import useFetch from "./utils/useFetch";
+import useFetch from './utils/useFetch';
+import Modules from './Modules/moduleMaker';
 
 export default function UserList() {
 
@@ -17,7 +18,7 @@ export default function UserList() {
     <h2>Alla användare</h2>
     {users.map(({ id, firstName, lastName, email }) => <article key={id}>
       <h3>{firstName} {lastName}</h3>
-      <p>E-post: {email}</p>
+      <p>E-post: {Modules.UserHandler.createMailLink({ firstName, lastName, email })}</p>
     </article>)}
 
   </section>;
