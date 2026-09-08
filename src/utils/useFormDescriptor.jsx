@@ -20,6 +20,7 @@ export default function useFormDescriptor(descriptor) {
   // variable fro each input
   const [formData, setFormData] = useState(null);
 
+  // Transform the descriptor into jsx by looping through it's entrie
   const fields = [];
   const initialFormState = {};
   for (let [formFieldName, fieldDescription] of Object.entries(descriptor)) {
