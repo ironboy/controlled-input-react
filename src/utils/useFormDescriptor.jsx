@@ -42,5 +42,6 @@ export default function useFormDescriptor(descriptor) {
   // If formData is null set it to initialFormState
   formData === null && setFormData(initialFormState);
 
-  return fields;
+  // Return the fields (jsx) and formData (the state)
+  return [fields, formData];
 }
