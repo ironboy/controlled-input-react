@@ -1,4 +1,4 @@
-import { useState, Fragment } from 'react';
+import { useState } from 'react';
 
 export default function useFormDescriptor(descriptor) {
 
@@ -20,18 +20,14 @@ export default function useFormDescriptor(descriptor) {
   // variable fro each input
   const [formData, setFormData] = useState(null);
 
-  // reset message after resetForm (see below)
-  const [resetMessage, setResetMessage] = useState('');
-
   // Function to reset form to initial state
   function resetForm(message) {
     setResetMessage(message);
     setFormData(initialFormState);
   }
 
-
   // Transform the descriptor into jsx by looping through it's entrie
-  const fields = [<Fragment key="resetMessage">{resetMessage}</Fragment>];
+  const fields = [];
   const initialFormState = {};
   for (let [formFieldName, fieldDescription] of Object.entries(descriptor)) {
     const { label, type, initialValue, required } = fieldDescription;
@@ -53,5 +49,5 @@ export default function useFormDescriptor(descriptor) {
   formData === null && setFormData(initialFormState);
 
   // Return the fields (jsx) and formData (the state)
-  return [fields, formData, resetForm];
+  return [fields, formData];
 }

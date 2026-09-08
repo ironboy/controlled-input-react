@@ -1,11 +1,23 @@
 {
-    "user": [
-        {
-            "firstName": "Thomas",
-            "lastName": "Frank",
-            "email": "thomas@nodehill.com",
-            "id": "pFjqNkkHsk0"
-        }
-    ],
-    "$schema": "./node_modules/json-server/schema.json"
+  "users": [
+    {
+      "firstName": "Anna",
+      "lastName": "Andersson",
+      "email": "anna@gmail.com",
+      "id": "BYvqvw6ggqs"
+    },
+    {
+      "firstName": "Bertil",
+      "lastName": "Bengtsson",
+      "email": "bertil@hotmail.com",
+      "id": "mZebDLdsNnQ"
+    },
+    {
+      "firstName": "Cecilia",
+      "lastName": "Carlsson",
+      "email": "cecilia@outlook.com",
+      "id": "UoeD3mHqP14"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
