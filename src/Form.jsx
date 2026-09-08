@@ -10,7 +10,7 @@ export default function Form({ descriptor }) {
     event.preventDefault();
     // send to backend 
     // (see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-    await fetch('/api/post/user', {
+    await fetch('/api/user', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
