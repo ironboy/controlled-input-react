@@ -1,14 +1,23 @@
-label {
-  display: block;
-  margin-bottom: 20px;
-  font-family: Verdana;
+form {
 
-  span {
-    display: inline-block;
-    width: 120px;
+  label {
+    display: block;
+    margin-bottom: 20px;
+    font-family: Verdana;
+
+    span {
+      display: inline-block;
+      width: 120px;
+    }
+
+
+    input {
+      width: calc(100% - 130px);
+      font-family: Verdana;
+    }
   }
 
-  input {
-    font-family: Verdana;
+  button {
+    float: right;
   }
 }
